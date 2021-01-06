@@ -68,12 +68,14 @@ public class MainActivity extends Activity {
         etRtmpUrl = (EditText)layout.findViewById(R.id.searchC);
         dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
+                DisplayUtil.hideNavBar(MainActivity.this);
                 initPlayer(etRtmpUrl.getText().toString());
             }
         });
 
         dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
+                DisplayUtil.hideNavBar(MainActivity.this);
                 dialog.dismiss();
             }
 
@@ -112,7 +114,6 @@ public class MainActivity extends Activity {
         videoPlayer.setUp(source1, true, "");
         videoPlayer.getTitleTextView().setVisibility(View.GONE);
         videoPlayer.startPlayLogic();
-        DisplayUtil.hideNavBar(MainActivity.this);
 
     }
 }

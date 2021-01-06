@@ -9,7 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btInputRtmp"
-        android:text="点击输入Rtmp"/>
+        android:text="点击输入Rtmp"
+        android:background="#00000000"/>
 
     <com.example.camera.StandardVideoPlayer
         android:id="@+id/id_videoview"
